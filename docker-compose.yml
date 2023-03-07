@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: 'todo'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 64M
+
+  apachephp:
+    build:
+      apachephp
+    ports:
+      - 8001:80
+    volumes:
+      - ./apachephp/vhosts:/etc/apache2/sites-enabled
+      - ./app:/var/www

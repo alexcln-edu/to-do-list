@@ -1,0 +1,132 @@
+html {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(109, 109, 109, 0.5)),
+                  url("../../img/background.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    border-top: 1px solid rgb(126, 123, 123);
+}
+
+.card-title {
+    text-align: center;
+}
+
+.err-box {
+    background: rgb(250, 147, 147);
+    border: rgb(255, 0, 0);
+    border-style: solid;
+    padding: 2px 5px;
+    color: rgb(255, 0, 0);
+    
+}
+
+.form-card {
+    backdrop-filter: blur(2px) saturate(180%);
+    -webkit-backdrop-filter: blur(2px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    min-width: 320px;
+    margin: 90px 90px;
+    padding: 10px 5px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.field > input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+.input-err {
+    border: 2px solid red;
+}
+
+.btn-holder {
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sq-btn {    
+    border: none;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+}
+
+.btn-lavande {
+    background-color: green;    
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.btn-lavande:hover {
+    background-color: lightgreen;  
+}
+
+.logout {
+    text-align: center;
+}
+
+#coll-content {
+    display: none;
+}
+
+#chevron-down {
+    display: none;
+}
+
+#chevron-right {
+    display: inline-block;
+}
+
+#collapser {
+    text-decoration: none;
+    color: #000000;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  table th,
+  table td {
+    padding: 0.5em;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+  }
+  
+  table td {
+    border: 1px solid #dddddd;
+  }
+  
+  table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+  }
